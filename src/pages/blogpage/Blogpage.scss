@@ -1,0 +1,24 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.blog-page{
+    min-height: 100vh;
+    .bloglist{
+        @include py(calrem(8*8));
+        
+    }
+
+    .bloglist-grid{
+        display: grid;
+        @include  col-condition(12);
+        @include row();
+        @include between();
+        @include middle();
+        grid-gap: calrem(16);
+
+        .item{
+            
+            @include col('xs', 12);
+            @include col('sm', 3.8);
+        }
+    }
+}

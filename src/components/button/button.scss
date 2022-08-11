@@ -1,0 +1,20 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.button{
+    button{
+        border: 2px solid $white;
+        color: $white;
+        background-color: transparent;
+        text-transform: uppercase;
+        padding: calrem(16);
+       border-radius: calrem($button-border-radus);
+       cursor: pointer;
+       transition: all .4s ease-in-out;
+       cursor: pointer;
+       &:hover{
+         background-color: $black-dark;
+         background-color: $primary-red;
+
+       }
+    }
+}

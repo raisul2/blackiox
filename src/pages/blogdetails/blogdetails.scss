@@ -1,0 +1,43 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+
+.blog-details{
+    @include py(calrem(8*8));
+    h2{
+        color: $black-dark;
+        
+        @include my(calrem(16));
+    }
+    h5{
+        color: $black-light;
+    }
+}
+
+.blogcode{
+    padding: calrem(30);
+    @include my(calrem(16));
+    border:  2px solid $black-light;
+    h3{
+        color: $black-dark;
+        font-weight: 600;
+    }
+}
+
+.related-blog{
+    @include py(calrem(8*8));
+    background-color: $white-dark;
+    min-height: 100vh;
+  
+     .related-grid{
+        display: grid;
+        @include col-condition(12);
+        @include row();
+        @include center();
+        grid-gap: calrem(16);
+         .item{
+            @include col('xs', 12);
+            @include col('sm', auto);
+         }
+     }
+}

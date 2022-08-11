@@ -1,0 +1,17 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.skillteam{
+    min-height: 100vh;
+    @include py(8*8);
+     .grid{
+        display: grid;
+        @include col-condition(12);
+        @include row();
+        @include between();
+         grid-gap: calrem(16);
+        .item{
+            @include col('xs' ,'auto'); 
+           
+        }
+     }
+} 

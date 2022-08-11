@@ -1,0 +1,19 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.section-title{
+    text-align: center;
+    width: 70%;
+    h1{
+      color: $black-dark;
+      margin-bottom: calrem(16);
+    }
+    h3{
+      color: $black-light;
+    }
+    @include respond-below(sm){
+      
+      width: 100%;
+    }
+    margin: auto;
+    margin-bottom: calrem(48);
+  }

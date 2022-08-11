@@ -1,0 +1,56 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+.wrapper{
+    border-radius: calrem($button-border-radus);
+    background-color: $white;
+   @include paddings();
+ 
+   box-shadow: $box-shadow-2-upbra;
+   cursor: pointer;
+ 
+   &:hover{
+       span{
+           background: $primary-red;
+           
+           i{
+               color: $white;
+            }
+        }
+    }
+    h3{
+        margin-bottom: calrem(8);
+        color: $black-dark;
+    }
+    h5{
+        color: $black-light;   
+    }
+    
+    span{
+        border-radius: 100px;
+        width: calrem(64);
+        height: calrem(64);
+        @include respond-below(sm){
+            width: calrem(48);
+            height: calrem(48);
+
+        }
+        display: grid;
+        transition: all .5s ease-in-out;
+        @include center();
+        @include middle();
+        background-color: $white;
+      margin-bottom: calrem(8);
+      
+       background: $white-dark;
+      
+        i{
+            color: $primary-red;
+            font-size: calrem(24);
+            color: $black-light;
+            
+        }
+    }
+} 
+
+

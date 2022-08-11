@@ -1,0 +1,27 @@
+@import  '../../scss-own-ibrary/scss/main.scss';
+
+
+.pagetitle{
+ height: 30vh;
+text-align: center;
+display: grid;
+@include center();
+background-color: $black-dark;
+@include middle();
+position: relative;
+
+.pagetitle1{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+}
+.pagetitle2{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+h1{
+    color: $white;
+    font-weight: 600;
+}
+}

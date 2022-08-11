@@ -1,0 +1,25 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.testomonial{
+    background-color: $white-dark;
+    @include py(calrem(8*8));
+    max-height: 100vh;
+    text-align: center;
+
+     .testomonial-grid{
+        display: grid;
+        @include center();
+        @include middle();
+         
+         @include row();
+         grid-gap: calrem(16);
+        
+     }
+
+}
+
+
+
+
+
+

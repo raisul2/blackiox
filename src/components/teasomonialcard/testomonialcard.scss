@@ -1,0 +1,60 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.textmonialcard{
+     max-width: 70%;
+     @include respond-below(sm){
+        max-width: 100%;
+     }
+    border-radius: calrem($button-border-radus);
+    background-color: $white;
+    box-shadow: $box-shadow-2-upbra;
+    @include py(calrem(40));
+    @include px(calrem(40));
+    @include respond-below(sm){
+        @include py(calrem(16));
+        @include px(calrem(16));
+    }
+@include flex(auto,column,center, center,calrem(16));
+   cursor: pointer;
+
+   .text{
+       position: relative;
+
+       h3{
+           color: $black-dark;
+           display: block;
+           max-width: 90%;
+           margin: auto;
+           text-align: center;
+        }
+    }
+   
+    .circleavater{
+        width: calrem(multi(8,10));
+        height: calrem(multi(8,10));
+        @include respond-below(sm){
+            width: calrem(multi(8,8));
+            height: calrem(multi(8,8));
+        }
+        background-color: $primary-red;
+        border-radius: calrem(100);
+    }
+.qutation{
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include respond-below(sm){
+        width: calrem(24);
+        height: calrem(24);
+    }
+}
+.qutation2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @include respond-below(sm){
+        width: calrem(24);
+        height: calrem(24);
+    }
+}
+}

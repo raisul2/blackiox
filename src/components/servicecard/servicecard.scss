@@ -1,0 +1,55 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+.service-card-wrapper{
+     
+     @include paddings();
+     cursor: pointer;
+    
+     display: grid;
+     background-color: $white-dark;
+     border-radius: calrem(12);
+  
+     transition: all .5s ease-in-out;
+       &:hover{
+          background: $primary-red;
+          h3{
+            color: $white;
+          }
+          h5{
+            color: $white-dark;
+          }
+          span{
+            i{
+
+              color: $white;
+            }
+          }
+       }
+     h3{
+        color: $black-dark;
+        text-transform:  capitalize;
+        margin-bottom: calrem(4);
+        
+    }
+    h5{
+         color: $black-light;
+
+     }
+    
+      span{
+          margin-bottom: calrem(16);
+        i{
+          font-size: calrem(40);
+          @include respond-below(sm){
+            
+            font-size: calrem(30);
+           }
+          color:  $primary-red;
+          
+          
+        }
+      }
+     
+
+}

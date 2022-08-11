@@ -1,0 +1,65 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+
+.work-card{
+    border-radius: calrem($button-border-radus);
+    position: relative;
+    box-shadow: $box-shadow-2-upbra;
+    transition: all .5s ease-in-out;
+  &:hover{
+    transform: scale(1.05);
+  }
+    min-height: 45vh;
+ 
+    @include respond-below(sm){
+        min-height: 35vh;
+
+    }
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: $box-shadow-2-upbra;
+ 
+    .text-wrapper{
+        position: absolute;
+        text-align: start;
+      
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color:$black-dark-opacity;
+      @include paddings();
+   
+
+        h4{
+            color: $white-dark;
+            margin-bottom: calrem($base-value);
+        }
+        h3{
+            color: $white;
+            margin-bottom: calrem($base-value*2);
+        }
+        button{
+            cursor: pointer;
+            border-radius:calrem( $button-border-radus);
+            border: 2px solid $white;
+            padding: calrem($base-value);
+            transition: all .5s ease-in-out;
+            text-transform: uppercase;
+            font-family: 700;
+            background-color: transparent;
+            color: $white;
+         
+            &:hover{
+                background-color: $black-dark;
+               
+            }
+            &:active{
+                background-color: $black-light;
+                color: $white-dark;
+            }
+        }
+    }
+}
+
+

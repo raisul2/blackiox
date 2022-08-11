@@ -1,0 +1,8 @@
+@import  '../../scss-own-ibrary/scss/main.scss';
+
+.main-sercice-page{
+    
+ &:nth-child(2){
+    background-color: $white;
+ }
+}

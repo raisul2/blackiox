@@ -1,0 +1,147 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+
+.servicedetails{
+    @include py(calrem(8*8));
+    min-height: 50vh;
+     .grid{
+        display: grid;
+        @include col-condition(12);
+        @include row();
+        @include between();
+        grid-gap: calrem(8*8);
+        .left{
+          @include col('md','auto');  
+          min-height: 50vh
+        }
+        .right{
+            
+            @include col('md', 'auto');  
+            h1{
+                color: $black-dark;
+                @include my(calrem(8));
+                
+            }
+            
+            h3{
+                color: $black-light;
+
+            }
+            .works{
+                margin-top: calrem(16);
+                h2{
+                     color: $black-dark;
+                     margin-bottom: calrem(8);
+                 }
+               }
+        }
+     }
+}
+.list{
+    i{
+        color : $primary-red;
+    }
+    @include flex(0,row, start, start, calrem(8));
+    margin-top: calrem(8);
+}
+
+.service2{
+    background-color: $white-dark;
+}
+
+.plancard{ 
+    @include paddings();
+    background-color: $white;
+    border-radius: calrem(12);
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+     align-items: center;
+     transition: all .5s ease-in-out;
+     &:hover{
+        background-color: $black-dark;
+        h2{
+            color: $white;
+            text-align: center;
+        }
+        h1{
+            color: $white-dark;
+            font-weight: 700;
+            @include my(calrem(8));
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+            margin-bottom: calrem(16);
+    
+            color: $white-dark;
+        }
+        span{
+            color: $white-dark;
+
+        }
+
+        button{
+            border: 2px solid $white;
+            color: $white;
+        }
+        
+     }
+    h2{
+        color: $black-light;
+        text-align: center;
+    }
+    h1{
+        color: $black-dark;
+        font-weight: 700;
+        @include my(calrem(8));
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+        margin-bottom: calrem(16);
+
+    }
+
+    .name{
+        @include py(calrem(8));
+        border-top: 1px solid $black-light;
+    }
+
+    button{
+        border: 2px solid $black-dark;
+        margin-top: calrem(8);
+        color: $black-dark;
+        background-color: transparent;
+        text-transform: uppercase;
+        padding: calrem(16);
+       border-radius: calrem($button-border-radus);
+       cursor: pointer;
+       transition: all .4s ease-in-out;
+       cursor: pointer;
+       &:hover{
+         background-color: $black-dark;
+         background-color: $primary-red;
+         color: $white;
+
+       }
+    }
+}
+
+.plan-grid{
+
+    
+    display: grid;
+@include col-condition(12);
+@include row();
+@include between();
+grid-gap: calrem(8*8);
+
+.item{
+    @include col('sm' , 'auto');
+    @include col('xs' , 12);
+}
+
+}

@@ -1,0 +1,25 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+.news{
+    @include py(calrem(8*8));
+    background-color: $white;
+    min-height: 100vh;
+    .view{
+        text-align: end;
+        color: $primary-red;
+        cursor: pointer;
+        margin-bottom: calrem(16);
+    }
+     .news-grid{
+        display: grid;
+        @include col-condition(12);
+        @include row();
+        @include center();
+        grid-gap: calrem(16);
+         .item{
+            @include col('xs', 12);
+            @include col('sm', auto);
+         }
+     }
+}

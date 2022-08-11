@@ -1,0 +1,70 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+.news-card{
+    border-radius: calrem($button-border-radus);
+    position: relative;
+  
+
+    height: 50vh;
+   width: 100%;
+   
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .4s  ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+   }
+
+    
+ 
+    .text-wrapper{
+        position: absolute;
+        text-align: start;
+      
+        bottom: 0;
+        left: 0;
+        width: 100%;
+          height: 25;
+        background-color:$black-dark-opacity;
+      @include paddings();
+      transition: all .2s ease-in-out;
+ 
+
+        h4{
+            color: $white-dark;
+            margin-bottom: calrem($base-value);
+        }
+        h3{
+            color: $white;
+            margin-bottom: calrem($base-value*2);
+        }
+        button{
+            cursor: pointer;
+            border-radius:calrem( $button-border-radus);
+            border: 2px solid $white;
+            padding: calrem($base-value);
+            @include respond-below(md){
+                padding: calrem(6);
+                font-size: calrem(11);
+
+            }
+            transition: all .5s ease-in-out;
+            text-transform: uppercase;
+            font-family: 700;
+            background-color: transparent;
+            color: $white;
+         
+            &:hover{
+                background-color: $black-dark;
+               
+            }
+            &:active{
+                background-color: $black-light;
+                color: $white-dark;
+            }
+        }
+    }
+}
+
+

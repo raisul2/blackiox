@@ -1,0 +1,98 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+.hero{
+    position: relative;
+    overflow: hidden;
+  background-color: $white;
+    
+    .svg2{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @include respond-below(md){
+            display: none;
+        }
+    }
+    .svg3{
+        position: absolute;
+        left: 0;
+        top: 5px;
+        @include respond-below(md){
+            display: none;
+        }
+    }
+}
+
+.hero-section{
+    min-height: 90vh;
+    display: grid;
+    @include middle();
+    @include center();
+    @include py(calrem($section-gap));
+    grid-gap: calrem($base-value*2) ;
+    position: relative;
+
+    .svg1{
+        position: absolute;
+        
+        right: 0;
+        @include respond-below(md){
+            display: none;
+        }
+    }
+   
+
+    h1{
+        margin-bottom: multi(8,6);
+        color: $black-dark;
+        font-weight: 600;
+     text-transform: capitalize;
+     max-width: 80%;
+     text-align: center;
+     margin: auto;
+     @include respond-below(sm){
+         max-width: 100%;
+     }
+      
+    }
+
+    .hero-grid{
+    
+        display: grid;
+       @include col-condition(12);
+       @include row();
+       grid-gap: calrem(16);
+       @include center();
+       @include center();
+       .item{
+        @include col("xs",'auto');
+       
+       }
+
+    }
+}
+
+
+
+.homedisplay{
+    @include paddings();
+text-align: center;
+    span{
+     
+          i{
+            margin-bottom: calrem(16);
+            font-size: calrem(40);
+            color: $primary-red;
+          }
+    }
+      h2{
+         color: $black-dark;
+         font-weight: 600;
+         margin-bottom: calrem(8);
+
+      }
+      h5{
+        color: $black-light;
+      }
+}

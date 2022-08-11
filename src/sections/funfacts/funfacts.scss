@@ -1,0 +1,18 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+.funfacts{
+
+    @include py(calrem(8*8));
+    
+    .funfacts-grid{
+    display: grid;
+    @include col-condition(12);
+    grid-gap: calrem(16);
+    @include row();
+   @include center();
+    .item{
+        @include col('xs', 'auto')
+    }
+}
+}

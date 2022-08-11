@@ -1,0 +1,110 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.contact-page{
+  
+    .wrapper-contact{
+          background-color: $white-dark;
+          min-height: 50vh;
+          @include py(calrem(8*8));
+    }
+    .contact-info{
+        display: grid;
+        @include col-condition(12);
+        @include  row();
+        @include between();
+        @include middle();
+grid-gap: calrem(16);
+        .item{
+            @include col('sm', 'auto');
+            @include col('xs', 12);
+             
+        }
+        
+
+    }
+}
+
+
+.padding{
+
+    @include py(calrem(8*8));
+}
+
+
+    .textfild-grid{
+
+        min-height: 100vh;
+        display: grid;
+        @include col-condition(12);
+   @include row();
+   @include between();
+   @include middle();
+   grid-gap: calrem(32);
+ 
+   .left{
+    @include col('xs', 'auto');
+    @include last('xs');
+    h1{
+        text-align: start;
+        color: $black-dark;
+        margin-bottom: calrem(8);
+    }
+    h5{
+        
+        color: $black-light;
+        margin-bottom: calrem(16);
+    }
+
+    .text-filds{
+        display: grid;
+        grid-gap: calrem(8);
+        input , textarea{
+            border-radius: calrem($button-border-radus);
+        border: 2px solid $black-light;
+           padding: calrem(16);
+}
+textarea{
+    resize: none;
+        border: 2px solid $black-light;
+       font-family: 'Poppins', sans-serif;
+     }
+      
+     button{
+         background-color: $primary-red;
+        color: $white;
+        @include py(calrem(16));
+        @include px(calrem(16));
+        margin-top: calrem(24);
+        text-transform: uppercase;
+        border-radius: calrem($button-border-radus);
+        font-size: 1.1rem;
+        border: none;
+        width: 50%;
+        transition: all .5s ease-in-out;
+        &:hover{
+            background-color: $black-dark
+        }
+        @include respond-below(sm){
+            
+            width: 100%;
+        }
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        &:hover{
+            background-color: $black-dark;
+        }
+    }
+    }
+}
+.right{
+    @include col('md', 6);
+    .img{
+        overflow: hidden;
+        height: 80vh;
+    border-radius: calrem($button-border-radus);
+    img{
+        width: 100%;
+    }
+   }
+   }
+}

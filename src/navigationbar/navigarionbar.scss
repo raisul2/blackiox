@@ -1,0 +1,146 @@
+@import '../scss-own-ibrary/scss/main.scss';
+
+.nav-wrapper{
+
+   background-color: $white;
+   @include py(calrem(8));
+    .nav-grid{
+        display: grid;
+        @include col-condition(12);
+        @include row();
+    @include  between();
+    @include  middle();
+    
+   .item-logo{
+    @include col("");
+}
+.item-navlink{
+    
+    @include col("");
+    span{
+        font-size: calrem($icon-size);
+         cursor: pointer;
+         color: $black-dark;
+         &:active{
+            color: $black-light;
+         }
+        @include respond-above(md){
+            display: none;
+        }
+    }
+   }
+}
+
+}
+
+.desktopnav{
+    display: grid;
+    @include row();
+     @include respond-below(md){
+         display: none;
+     }
+
+}
+.mobilenav{
+    z-index: 100;
+    position: fixed;
+    right: 0;
+     top: 0;
+     
+     width: 50%;
+     background-color: $white;
+     box-shadow: $box-shadow-2-penumbra;
+     height: 100vh;
+    @include flex(0,column, center, center, 0);
+   transition: all 0.5s ease-in-out;
+   .outherclick{
+    background-color: rgba(0, 0, 0, 0.345);
+     height: 100vh;
+     width: 100%;
+     position: absolute;
+     left: -100%;
+   }
+    span{
+        font-size: calrem($icon-size);
+         cursor: pointer;
+         position: absolute;
+         top:calrem(5);
+         left: calrem(15);
+   
+         &:active{
+            color: $black-light;
+         }
+        }
+    .wrappers{
+
+    
+    display: grid;
+     
+    li{
+        color: $black-dark;
+    }
+   
+     @include center();
+     @include middle();
+     @include respond-above(md){
+         display: none;
+     }
+
+}
+}
+
+
+
+
+li{
+    list-style-type: none;
+    padding: $icon-size + px;
+    text-transform: capitalize;
+    font-weight: 600;
+    position: relative;
+    letter-spacing: 1px;
+    cursor: pointer;
+ 
+    &:hover{
+        color: $primary-red;
+        &::after{
+            content: "";
+        height: 4px;
+        border-radius: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $primary-red;
+        }
+    }
+}
+
+a{
+    text-decoration:  none;
+    color: $black-dark; 
+  }
+
+
+  .fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 80;
+    box-shadow: $box-shadow-2-penumbra;
+    background-color: $white;
+    a{
+        color: $black-dark; 
+    }
+
+       
+    .nav-grid{
+
+.item-navlink{
+    span{
+        color: $black-dark;
+    }
+}
+    }
+  }

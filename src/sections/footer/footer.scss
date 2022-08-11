@@ -1,0 +1,101 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+.footer{
+ background-color: $black-dark;
+ h5{
+    color: $white-dark;
+    text-transform: capitalize;
+}
+ .top{
+    min-height: 30vh;
+    padding: calrem(32);
+    @include flex(0, row, center, space-between,calrem(16));
+    border-bottom: 1px solid $white;
+    @include  respond-below(sm){
+        
+        @include flex(0, column, start, center, calrem(16));
+    }
+    @include py(calrem(8*8));
+    h2{
+        color:$white;
+        font-weight: 500;
+        
+    }
+    button{
+        @include px(calrem(8*8));
+        @include py(calrem(16));
+        
+         border-radius: calrem($button-border-radus);
+          color: $white;
+          font-size: 1rem;
+          border: 2px solid $white;
+          text-transform: uppercase;
+          transition: all .5s ease-in-out;
+          cursor: pointer;
+           background-color: transparent;
+           &:hover{
+            background-color: $primary-red;
+
+           }
+
+           @include respond-below(sm){
+            @include px(calrem(16));
+            @include py(calrem(10));
+           }
+    }
+ }
+}
+
+
+
+
+.footerlink{
+    h3{
+        color: $white;
+        margin-bottom: calrem(16);
+    }
+}
+
+.item{
+@include py(calrem(32))
+}
+.bottom{
+  
+     display: grid;
+     @include col-condition(12);
+     @include between();
+   
+     @include row();
+     grid-gap: calrem(16);
+     .left{
+         @include col('md' ,4);
+         .logo{
+            width: 50%;
+            margin-bottom: calrem(16);
+           
+         }
+       
+     }
+     .link{
+        @include col('xs' ,'auto');
+       
+    }
+    .sayhellow{
+        
+        @include col('md' ,3);
+        h3{
+            color: $white;
+            margin-bottom: calrem(16);
+        }
+
+        .icon{
+            @include flex(0,row, start, start, calrem(16));
+            color:$white;
+            margin-top: calrem(8);
+            font-size: calrem(20);
+        }
+        
+     }
+
+}

@@ -1,0 +1,27 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+
+.find-work{
+     max-height: 100vh;
+     @include py(calrem(8*8))
+     .wrapper{
+          @include flex(0,column, center,center , 0);
+         .card{
+             
+             border-radius: calrem($button-border-radus);
+             padding: calrem(64);
+         background-color: $black-dark;
+         display: flex;
+         gap: calrem(24);
+         flex-direction: column;
+         h2{
+            color: $white;
+            font-weight: bolder;
+            text-transform: uppercase;
+         }
+         h3{
+            color:$white-dark;
+         }
+        }
+     }
+}

@@ -1,0 +1,23 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.funfactscardwrapper{
+    @include paddings();
+    display: grid;
+    @include center();
+    @include middle();
+    grid-gap: calrem(8);
+    background-color: $white;
+    border-radius: $button-border-radus;
+    box-shadow: $box-shadow-2-upbra;
+    text-align: center;
+    h2{
+       color: $primary-red;
+       font-weight: 700;
+
+    }
+
+    h3{
+       color: $black-dark;
+       
+    }
+}

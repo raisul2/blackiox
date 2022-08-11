@@ -1,0 +1,51 @@
+@import '../../scss-own-ibrary/scss/main.scss';
+
+.services{
+    @include py(100);
+    min-height: 100vh;
+    @include py(calrem(8*8));
+  
+    .service-grid{
+        display: grid;
+        @include col-condition(12);
+        @include center();
+        @include between();
+
+        .item-text{
+            @include col('md', 4);
+            h1{
+                color: $black-dark;
+                margin-bottom: calrem(8);
+                
+            }
+            h3{
+                color: $black-light;
+                margin-bottom: calrem(16);
+            }
+            h5{
+                cursor: pointer;
+                color: $black-dark;
+                font-weight: 600;
+                &:hover{
+                    color: $primary-red;
+
+                }
+            }
+        }
+        .item-cards{
+         
+            .item-cards-grid{
+
+                display: grid;
+                @include row();
+                grid-gap: calrem(20);
+                @include center();
+                @include  col-condition(12);
+                .item{
+                    @include col('xs', 'auto');
+                }
+            }
+          
+        }
+    }
+}

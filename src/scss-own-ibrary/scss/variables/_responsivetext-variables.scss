@@ -1,0 +1,116 @@
+@import "responsive-breakpoints";
+//display
+
+@function calrem($pxvalue){
+    @return $pxvalue * 0.0625 + rem
+} 
+
+h1{
+    @include respond-above(4k){
+
+        line-height: calrem(100);
+        font-size: calrem(80);
+        font-weight: 500; 
+    }
+    @include respond-below(4k){
+
+        line-height: calrem(64);
+        font-size: calrem(57);
+        font-weight: 400; 
+    }
+     @include  respond-below(md){
+        line-height: calrem(52);
+        font-size: calrem(45);
+        font-weight: 400;
+     }
+     @include  respond-below(sm){
+        line-height: calrem(44);
+        font-size: calrem(36);
+        font-weight: 400;
+     }
+}
+/// heading 
+h2{
+    @include respond-below(4k){
+
+        line-height: calrem(40);
+        font-size: calrem(32);
+        font-weight: 400; 
+    }
+     @include  respond-below(md){
+        line-height: calrem(36);
+        font-size: calrem(28);
+        font-weight: 400;
+     }
+     @include  respond-below(sm){
+        line-height: calrem(32);
+        font-size: calrem(24);
+        font-weight: 400;
+     }
+}
+// title
+h3{
+    @include respond-below(4k){
+
+        line-height: calrem(28);
+        font-size: calrem(22);
+        font-weight: 400; 
+    }
+     @include  respond-below(md){
+        line-height: calrem(24);
+        font-size: calrem(16);
+        letter-spacing: calrem(0.15);
+        font-weight: 500;
+    }
+    @include  respond-below(sm){
+        line-height: calrem(20);
+        font-size: calrem(14);
+        letter-spacing: calrem(0.1);
+        font-weight: 500;
+     }
+}
+// label 
+h4{
+    @include respond-below(4k){
+
+        line-height: calrem(20);
+        font-size: calrem(14);
+        letter-spacing: calrem(0.1);
+        font-weight: 500; 
+    }
+     @include  respond-below(md){
+        line-height: calrem(16);
+        font-size: calrem(12);
+        letter-spacing: calrem(0.5);
+        font-weight: 500;
+    }
+    @include  respond-below(sm){
+        line-height: calrem(16);
+        font-size: calrem(11);
+        letter-spacing: calrem(0.5);
+        font-weight: 500;
+     }
+}
+// body
+h5{
+    @include respond-below(4k){
+
+        line-height: calrem(24);
+        font-size: calrem(16);
+        letter-spacing: calrem(0.5);
+        font-weight: 400; 
+    }
+     @include  respond-below(md){
+        line-height: calrem(20);
+        font-size: calrem(14);
+        letter-spacing: calrem(0.25);
+        font-weight: 400;
+    }
+    @include  respond-below(sm){
+        line-height: calrem(16);
+        font-size: calrem(12);
+        letter-spacing: calrem(0.4);
+        font-weight: 400;
+     }
+}
+
